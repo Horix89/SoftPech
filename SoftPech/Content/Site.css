@@ -1,0 +1,383 @@
+﻿body {
+    /*font-family: 'Lato', Calibri, Arial, sans-serif;*/
+    /*font-family: 'Patua one';*/
+    font-family: 'Marvel' sans-serif;
+}
+
+/*.menuActive {
+
+    border-bottom: 2px solid #fe5858;
+    color: #fe5858;
+}*/
+
+.menuActive{
+    /*text-decoration: underline;*/
+
+    border-bottom: 2px solid #fe5858;
+    color: #fe5858!important;
+
+}
+.body {
+    padding-top: 66px; 
+    background-color:#EFEEEF; 
+    box-shadow:0px 0px 10px rgba(51, 51, 51, 0.9); 
+    /*font-family: 'Lato', Calibri, Arial, sans-serif;*/
+    /*font-family: 'Patua one';*/
+    font-family: 'Marvel' sans-serif;
+    font-size: 17px;
+}
+
+.divPrincipal {
+    text-align: center;
+    margin-bottom:25px; 
+    /*padding-top: 40px;*/
+}
+
+#presentacion {
+    background: url(/Images/fly.jpg) 50% 0 fixed; 
+    height: auto;  
+    margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    padding: 60px 0px 30px 0px;
+    
+    
+}
+
+.Bienvenido {
+    
+    padding-bottom: 40px;
+
+}
+
+    .Bienvenido h1 {
+        font-size:55px;
+        /*font-family: 'Lato', Calibri, Arial, sans-serif;*/
+        /*font-family: 'Patua one';*/
+        font-family: 'Marvel' sans-serif;
+    }
+        .Bienvenido h1 span {
+            font-size:90px;
+            font-style: italic;
+            position: relative;
+
+        }
+
+    #nombreEmpresa {
+        font-family: 'Lato', Calibri, Arial, sans-serif; color: #fe5858;
+    }
+
+.copete {
+    font-size: 25px;
+}
+
+#sectionContienePartial {
+    padding-top: 60px;    
+}
+
+.sectionHome {
+    background-color: #FFF; 
+    padding: 20px;
+    /*border-radius: 5px;*/
+    border-top: 1px solid;
+}
+
+
+
+.btnQuienesSomos {
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+
+.carrouselQS {
+    margin-top: 4%;
+}
+
+.carrouselA {
+    height:500px;
+}
+
+
+
+.tituloCarrousel {
+    font-family: 'Marvel' sans-serif; 
+    font-size: 70px; 
+    margin: 30px; 
+    color:#FE2F2F;
+}
+
+.cuerpoCarrousel {
+    color: black;
+    font-family: 'Marvel' sans-serif;
+}
+
+.carrouselB {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.carrouselBContenedor {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.TituloCarrouselParte {
+    font-family: 'Marvel' sans-serif;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+}
+
+.cuerpoCarrouselParte {
+    color: black;
+}
+
+.carrouselC{
+    height: 500px; 
+    font-family: 'Marvel' sans-serif;
+}
+
+.tituloQueHacemos {
+    font-size: 70px; 
+    font-family: 'Marvel' sans-serif; 
+    font-weight:bold;
+}
+
+.subtituloQueHacemos {
+    font-size: 40px; 
+    margin-top: 20px; 
+    color: #fe5858;
+}
+
+.tecnicaDesarrolloTitulo {
+    font-size: 25px;
+}
+
+.btnQueHacemos {
+    margin-top: 64px;
+}
+
+.tituloComoHacemos {
+    font-size: 70px; 
+    font-family: 'Marvel' sans-serif; 
+    font-weight:bold;
+}
+
+.tecnicasComoHacemos {
+    background-color:#FFF; 
+    color:#1DBB90; 
+    font-size: 14px;
+}
+
+    .tecnicasComoHacemos .fila {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-top: 4%;
+    }
+
+.descripcionTecnicaComoHacemos {
+    margin-top: 20px;    
+}
+
+.circle {
+        display: inline-block;
+        margin: 1em;
+    }
+
+    .circles-decimals {
+        font-size: .4em;
+    }
+
+.btnComoLoHacemos {
+    margin-top: 14px;
+}
+
+.btnTecnologias {
+    margin-top: 40px;
+    
+}
+
+.btnContacto {
+    margin-top: 90px;
+}
+
+.cuadroInformacion {
+    min-height: 175px!important;
+    font-size: 14px;
+    /*background: url(/Images/pineapplecut.png) 0px 0px repeat transparent; zoom: 1;*/
+    background-color: #FFF;
+    font-size: 18px;
+    
+    padding: 20px 20px 20px 0px;
+    text-align: left;
+    
+    /*transition: width 1s, height 1s, transform 1s;
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera 
+    transform: rotate(180deg);*/
+    /*border-radius: 20px;*/
+    /*border: 1px solid #fe2f2f;*/
+}
+
+    .cuadroInformacion:hover {
+        /*width: 102%;
+        height: 115%;
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera 
+        -webkit-transition-delay: 0.5s;
+        transform: rotate(0deg);*/
+        cursor: pointer;
+        background-color: #e2e1de;
+        height: inherit;
+        
+    }
+
+    .cuadroInformacion:hover p {
+        /*color: #fe5858;*/
+        color:#20A0EA; 
+    }
+
+        .cuadroInformacion:hover i {
+        
+            /*color: #fe5858;*/
+            color:#20A0EA; 
+        }
+
+.cuadroInformacion p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+    .cuadroInformacion span {
+        font-size: 17px;
+        letter-spacing: 0.2mm;
+    }
+
+.separadorEleginos {
+    background-color: #61BDF2;
+    
+    /*font-family: 'Patua one';*/
+    font-family: 'Marvel' sans-serif;
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
+}
+
+    .separadorEleginos div {
+        font-size: 60px; 
+        color: white;
+    }
+
+    .separadorEleginos p {
+        font-size: 40px;
+    }
+
+
+.partialQS {
+    margin-top: 20px;
+}
+
+.MenuQuienesSmos {
+    background-color: #1d2f3e;
+    vertical-align: middle;
+}
+    .MenuQuienesSmos a {
+        cursor: pointer
+    }
+    
+    .MenuQuienesSmos a:hover {
+        color:white;
+    }
+
+.partialQH {
+    margin-top: 20px;
+}
+
+.separadorEleginos2 {
+    /*background: url(/Images/pineapplecut.png) 0px 0px repeat transparent; zoom: 1;*/
+    /*font-family: 'Patua one';*/
+    font-family: 'Marvel' sans-serif;
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
+    margin-top: 50px;
+}
+
+    .separadorEleginos2 div {
+        font-size: 60px; 
+        
+    }
+
+    .separadorEleginos2 p {
+        font-size: 40px;
+        color: #1DBB90;
+    }
+
+.partialQH {
+    /*background-color: #1DBB90;*/
+    
+}
+
+.glyphicon {
+    font-size: 30px;
+}
+
+/*IMAGENES ICONOS SEGUND TAMAÑO*/
+
+.tamano {
+    font-size: 75px;
+}
+
+.circleBorderImg {
+    border: 2px solid;
+    padding: 15%;
+    border-radius: 50%;
+}
+
+
+@media screen and (max-width: 1010px) {
+  .tamano {
+    font-size: 55px;
+  }
+
+  
+}
+
+@media screen and (max-width: 950px) {
+  .tamano {
+    font-size: 50px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+  .tamano {
+    font-size: 40px;
+    
+  }
+  
+}
+
+
+@media screen and (max-width: 850px) {
+  .tamano {
+    font-size: 40px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 650px) {
+  .tamano {
+    font-size: 35px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .tamano {
+    font-size: 25px;
+    
+  }
+   
+  
+  
+}

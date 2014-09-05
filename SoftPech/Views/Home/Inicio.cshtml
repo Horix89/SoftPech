@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/MasterPublica.cshtml";
+}
+
+
+<div class="divPrincipal">
+    <div id="presentacion">
+        <div class="Bienvenido" id="bienvenido">
+            <h1>Bienvenido a <span id="nombreEmpresa">SoftPech</span></h1>
+        </div>
+
+        <p class="copete">
+            Somos una empresa IT de soluciones informáticas formada por jovenes programadores, con experiencia en el desarrollo de software. <br />
+            Brindamos desarrollo y mantenimiento utilizando las últimas tecnologías.
+        </p>
+    </div>
+
+    <section id="sectionHome" class="sectionContienePartial">
+        <div id="partialInicio">
+            @Html.Partial("_HomeInicio")
+        </div>
+    </section>
+
+    @*<div class="separadorEleginos2 text-center">
+            <div>¿Por qué elegirnos?</div>
+            <p>Porque hacemos los que nos apasiona y estamos comprometidos en ofrecer el mejor servicio.</p>
+        </div>*@
+
+
+    <section id="sectionQuienesSomos" class="sectionContienePartial">
+        <div class="partialQS">
+            @Html.Partial("_QuienesSomos")
+        </div>
+    </section>
+
+    @*<div class="separadorEleginos text-center" style="margin-top: 33px;">
+            <div>¿Por qué elegirnos?</div>
+            <p>Porque hacemos los que nos apasiona y estamos comprometidos en ofrecer el mejor servicio.</p>
+        </div>*@    
+
+    <section id="sectionQueHacemos" class="sectionContienePartial">
+
+        <div class="partialQH">
+            @Html.Partial("_QueHacemos")
+        </div>
+    </section>
+
+    <div class="separadorEleginos text-center">
+        <div>¿Por qué elegirnos?</div>
+        <p>Porque hacemos los que nos apasiona y estamos comprometidos en ofrecer el mejor servicio.</p>
+    </div>
+
+
+    <section id="sectionComoHacemos" class="sectionContienePartial">
+
+        <div class="partialQH">
+            @Html.Partial("_ComoLoHacemos")
+        </div>
+    </section>
+
+    <section id="sectionTecnologias" class="sectionContienePartial">
+        <div class="partialQH">
+            @Html.Partial("_Tecnologias")
+        </div>
+    </section>
+
+</div>
+
+

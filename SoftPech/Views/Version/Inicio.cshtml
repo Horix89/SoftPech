@@ -1,0 +1,268 @@
+﻿@model SoftPech.Models.InicioViewModel
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/MasterPublica.cshtml";
+}
+
+<div class="divPrincipal">
+    <div id="presentacion">
+        <div style="position: absolute; z-index: 999;">
+            <div class="SSCuerpo" id="cuerpo">
+                <span style="padding: 3px; margin-bottom: 2px;">Cambia los colores de la pagina!</span>
+                <table>
+                    <tr id="primerEstilo" style="cursor: pointer;">
+                        <td style="width: 150px; height: 25.5px; background-color: #fe5858; border: 2px solid white;"></td>
+                        <td style="width: 150px; height: 25.5px; background-color: #20A0EA; border: 2px solid white;"></td>
+                    </tr>
+                    <tr id="segundoEstilo" style="cursor: pointer;">
+                        <td style="width: 150px; height: 25.5px; background-color: #1BBC9B; border: 2px solid white;"></td>
+                        <td style="width: 150px; height: 25.5px; background-color: #34495E; border: 2px solid white;"></td>
+                    </tr>
+                    <tr id="tercerEstilo" style="cursor: pointer;">
+                        <td style="width: 150px; height: 25.5px; background-color: #15AD9F; border: 2px solid white;"></td>
+                        <td style="width: 150px; height: 25.5px; background-color: #464856; border: 2px solid white;"></td>
+                    </tr>
+                </table>
+                @*<div style="border-bottom: 1px solid; padding: 3px; background-color: #fe5858; height: 24.5px; margin-top: 5px;"></div>
+                <div style="border-bottom: 1px solid; padding: 3px; background-color: blue; height: 24.5px;"></div>
+                <div style="border-bottom: 1px solid; padding: 3px; background-color: green; height: 24.5px;"></div>*@
+            </div>
+            <div class="AbrirStylwSwitch" id="boton">
+                <i class="fa fa-cog spinner"></i>
+            </div>
+        </div>
+        <div class="container-fluid" style="margin-top: 6%;">
+
+           
+
+            <div class="Bienvenido" id="bienvenido">
+                <h1>Bienvenido a <span id="nombreEmpresa">SoftPech</span></h1>
+            </div>
+
+           
+
+            <p class="copete">
+                Somos una empresa IT de soluciones informáticas formada por analistas y programadores, con experiencia en el desarrollo de software. <br />
+                Brindamos mantenimiento, desarrollo de software a medida y apliciones web, utilizando las últimas tecnologías.
+            </p>
+
+        </div>
+        
+        <div class="sectionSlider">
+
+            <a href="/Version/Inicio#sectionHome" style="text-decoration: none;">
+                <div>Comenzar</div>
+                <i class="glyphicon glyphicon-circle-arrow-down icono"></i>
+            </a>
+        </div>
+    </div>
+    
+    <section id="sectionHome" class="sectionConBackground">
+        
+        <div id="partialInicio">
+            @Html.Partial("_HomeInicio")
+        </div>
+
+        <div class="sectionSlider">
+
+            <a href="/Version/Inicio#sectionQuienesSomos" style="text-decoration: none;">
+
+                <i class="glyphicon glyphicon-circle-arrow-down icono"></i>
+            </a>
+        </div>
+
+    </section>
+
+    @*<div class="separadorEleginos2 text-center">
+            <div>¿Por qué elegirnos?</div>
+            <p>Porque hacemos los que nos apasiona y estamos comprometidos en ofrecer el mejor servicio.</p>
+        </div>*@
+
+
+    <section id="sectionQuienesSomos" class="sectionContienePartial">
+        <div class="partialQS">
+            @Html.Partial("_QuienesSomos")
+        </div>
+
+        <div class="sectionSlider" id="sliderQuienesSomos">
+
+            <a href="/Version/Inicio#sectionQueHacemos" style="text-decoration: none;">
+
+                <i class="glyphicon glyphicon-circle-arrow-down icono"></i>
+            </a>
+        </div>
+
+
+    </section>
+
+   
+
+    <section id="sectionQueHacemos" class="sectionQueHacemos">
+        <div class="partialQH">
+            @Html.Partial("_QueHacemos")
+        </div>
+
+        <div class="sectionSlider">
+
+            <a href="/Version/Inicio#sectionComoHacemos" style="text-decoration: none;">
+
+                <i class="glyphicon glyphicon-circle-arrow-down icono"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <div class="separadorEleginos text-center">
+        <div>¿Por qué elegirnos?</div>
+        <p>Porque hacemos los que nos apasiona y estamos comprometidos en ofrecer el mejor servicio.</p>
+    </div>
+
+
+    <section id="sectionComoHacemos" class="sectionComoHacemos">
+        <div class="partialQH">
+            @Html.Partial("_ComoLoHacemos")
+        </div>
+
+        <div class="sectionSlider">
+
+            <a href="/Version/Inicio#sectionTecnologias" style="text-decoration: none;">
+
+                <i class="glyphicon glyphicon-circle-arrow-down icono"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="sectionTecnologias" class="sectionContienePartial">
+        <div class="partialQH">
+            @Html.Partial("_Tecnologias")
+        </div>
+    </section>
+
+    <section id="sectionContacto" class="sectionContactoBackground">
+        <div class="partialQH">
+            @Html.Partial("_Contacto")
+        </div>
+    </section>
+
+    <div class="footer text-left container-fluid">
+        <div class="container-fluid text-center">
+            <div class="col-sm-4">
+                <div class="container-fluid">
+                    <span class="footerNombreEmpresa">
+                        SoftPech
+                    </span>
+                </div>
+                <div class="container-fluid">
+                    <span class="fa-stack fa-lg" id="face">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+
+                    <span class="fa-stack fa-lg" id="tw">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-4 menuFooter">
+                <div>
+                    <a href="/Version/Inicio#sectionHome">Home</a>
+                </div>
+                <div>
+                    <a href="/Version/Inicio#sectionQuienesSomos">¿Quiénes Somos?</a>
+                </div>
+                <div>
+                    <a href="/Version/Inicio#sectionQueHacemos">¿Qué hacemos?</a>
+                </div>
+                <div>
+                    <a href="/Version/Inicio#sectionComoHacemos">¿Cómo lo hacemos?</a>
+                </div>
+                <div>
+                    <a href="/Version/Inicio#sectionTecnologias">Tecnologías</a>
+                </div>
+                <div>
+                    <a href="/Version/Inicio#sectionContacto">Contacto</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <span style="color: white;">Envianos tu consulta a <a href="mailto:softpech@softpech.com" style="text-decoration: underline;">softpech@softpech.com</a></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footerFinal">
+        <div class="container-fluid text-center" style="font-size: 18px;">
+            <span style="color: white; font-family: 'Marvel'">2014. <span style="font-family: 'Lato'; font-style: italic;">Softpech</span>. El mejor servicio desde la mejora continua.</span>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+    $(function () {
+        $('.sectionSlider').localScroll({
+            target: 'body'
+        });
+
+        $('.menuFooter').localScroll({
+            target: 'body'
+        });
+
+        $(".AbrirStylwSwitch").on('click', function () {
+
+            $("#cuerpo").toggleClass('SScuerpo');
+            $("#cuerpo").toggleClass('SSCuerpoOpen');
+
+            $("#boton").toggleClass('AbrirStylwSwitch');
+            $("#boton").toggleClass('AbrirStylwSwitchOpen');
+        });
+
+        $("#primerEstilo").on('click', function () {
+            $("#hojaEstilo").attr("href", "/Content/Site1.css");
+            //$("#iconoPaginaRosa").css('display', 'block');
+            //$("#iconoPaginaVerde").css('display', 'none');
+            $("#iconoPaginaRosa").css(
+                {
+                    "content": "url('/Images/spRosa.png')",
+                    "width": "37px",
+                    "height": "auto",
+                    "float": "left",
+                    "position": "relative",
+                    "top": "9px",
+                    "left": "10px",
+                    "margin-right": "5px",
+                });
+        });
+
+        $("#segundoEstilo").on('click', function () {
+            $("#hojaEstilo").attr("href", "/Content/Site1-2.css");
+
+            
+            $("#iconoPaginaRosa").css(
+                {
+                    "content": "url('/Images/SP.png')",
+                    "width": "37px",
+                    "height": "auto",
+                    "float": "left",
+                    "position": "relative",
+                    "top": "9px",
+                    "left": "10px",
+                    "margin-right": "5px",
+                });
+
+            ////$("#iconoPaginaVerde").addClass('logoVerde');
+            
+            
+        });
+
+        $("#tercerEstilo").on('click', function () {
+            $("#hojaEstilo").attr("href", "/Content/Site1-3.css");
+            return false;
+        });
+        
+    });
+</script>

@@ -1,0 +1,144 @@
+﻿<div>
+    <p class="titulosSeccion">
+        Tenocologías
+    </p>
+
+    <p class="copeteSeccion">
+       uno de nuestros valores es la mejora continua y eso nos lleva a siempre trabajar con las ultimas tecnologías.
+    </p>
+
+	
+	
+    <div class="cbp-so-scroller" id="cbp-so-scroller">
+
+        <section class="cbp-so-section">
+            <article class="cbp-so-side cbp-so-side-left">
+                <h2 class="subtituloQueHacemos">Diseño y desarrollo web</h2>
+
+            </article>
+
+            <article class="cbp-so-side cbp-so-side-right">
+                <p class="copeteTecnologias">Estas son las tecnologías mas importantes y nuevas con las que trabajamos para realizar aplicaciones web.</p> 
+            </article>
+        </section>
+
+        <section class="cbp-so-section container-fluid">
+
+            <article class="col-lg-2 col-md-2 col-sm2 col-lg-offset-1 cbp-so-side cbp-so-side-right">
+                <h2 class="subtituloTecnologias">JQuery/Javascript</h2>
+                <img src="~/Images/js.png"/>
+            </article>
+
+            <article class="col-lg-2 col-md-2 col-sm2 cbp-so-side cbp-so-side-right">
+                <h2 class="subtituloTecnologias">HTML5</h2>
+                <img src="~/Images/html5.png" />
+            </article>
+
+            <article class="col-lg-2 col-md-2 col-sm2  cbp-so-side cbp-so-side-right">
+                <h2 class="subtituloTecnologias">.net MVC</h2>
+                <img src="~/Images/.netmvc.png" />
+            </article>      
+        
+            @*<article class="col-lg-2 col-md-2 col-sm2 cbp-so-side cbp-so-side-right">
+                <h2 class="subtituloTecnologias">.NET</h2>
+                <img src="~/Images/js.png" />
+            </article>*@
+
+            <article class="col-lg-2 col-md-2 col-sm2 cbp-so-side cbp-so-side-right">
+                <h2 class="subtituloTecnologias">CSS3</h2>
+                <img src="~/Images/css3.png" />
+            </article>
+
+            <article class="col-lg-2 col-md-2 col-sm2 cbp-so-side cbp-so-side-right">
+                @*<img src="~/Images/pssinfondo.png" />*@
+                <h2 class="subtituloTecnologias" style="margin-bottom: 10px;">Photoshop</h2>
+                
+                <img src="~/Images/psconfondo.png" style="width: 230px; height:auto;"/>
+                
+                @*<img src="~/Images/js.png" />*@
+            </article>
+        </section>
+        <br />
+        <section class="cbp-so-section">
+            <article class="cbp-so-side cbp-so-side-left">
+                <h2 class="subtituloQueHacemos">Aplicaciones Mobiles</h2>
+                <p style="font-size: 30px;">
+                    Desarollamos las mismas para la plataforma mas conocida: Android.<br />
+                    Esto lo hacemos mediante tecnologia JAVA y .Net aplicado!
+                </p>
+            </article>
+            <figure class="cbp-so-side cbp-so-side-right">
+                <img src="~/Images/celus2.png" style="width: 65%" />
+                @*<i class="fa fa-tablet" style="font-size: 300px;"></i>*@
+            </figure>
+        </section>
+
+        <hr style="width: 85%;" />
+        <section class="cbp-so-section">
+            <figure class="cbp-so-side cbp-so-side-left">
+                @*<i class="fa fa-floppy-o" style="font-size: 300px;"></i>*@
+                <img src="~/Images/celus2.png" style="width: 65%" />
+            </figure>
+            <article class="cbp-so-side cbp-so-side-right">
+                <h2 class="subtituloQueHacemos">Aplicaciones de escritorio</h2>
+                <p style="font-size: 30px;">
+                    Mediante tecnologias .NET desarrollamos aplcaciones de escritorio adaptables y autoadminsitrables
+                </p>
+            </article>
+        </section>
+
+    </div>
+
+
+    @*<div id="circulos">
+        
+        <div class="circle" id="circles-1"></div>
+        <div class="circle" id="circles-2"></div>
+        <div class="circle" id="circles-3"></div>
+        <div class="circle" id="circles-4"></div>
+        <div class="circle" id="circles-5"></div>
+        <div class="circle" id="circles-6"></div>
+    </div>*@
+    
+    @*<div class="col-lg-12" style="font-size: 30px;">
+        <p>Estas son las tecnologías mas importantes y nuevas con las que trabajamos para realizar aplicaciones web.</p> 
+    </div>*@
+
+    @*<div class="row text-center">
+
+        <p class="subtituloQueHacemos">Diseño y desarrollo Mobile</p>
+    </div>
+    
+    <div id="circulosMobile">
+
+        <div class="circle" id="circles-7"></div>
+        <div class="circle" id="circles-8"></div>
+        <div class="circle" id="circles-9"></div>
+        
+    </div>
+
+    <div class="col-lg-12" style="font-size: 30px;">
+        <p>Estas son las tecnologías mas importantes y nuevas con las que trabajamos para realizar aplicaciones web.</p>
+    </div>*@
+
+
+</div>
+
+@*<script src="~/Scripts/jquery.appearCircle.js"></script>
+<script src="~/Scripts/circles.js"></script>
+<script>
+            $(function () {
+                $(".circle").hide();
+                appearDiseño($("#circulos"), 'web');
+
+                appearDiseño($("#circulosMobile"), 'mobile');
+
+            });
+</script>*@
+<script src="~/Scripts/modernizr-2.6.2.js"></script>
+<script src="~/Scripts/classie.js"></script>
+<script src="~/Scripts/cbpScroller.js"></script>
+
+<script>
+    new cbpScroller(document.getElementById('cbp-so-scroller'));
+</script>

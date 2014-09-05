@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>@ViewBag.Title - SoftPech</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico|Damion|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width" />
+    
+
+    @*@Styles.Render("~/Content/css")*@
+    @{
+        
+        var css = (string)ViewData["css"];
+        var controller = (string)ViewData["Controller"];
+    }
+    <link href="~/@css" rel="stylesheet" id="hojaEstilo"/>
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <script src="~/Scripts/jquery-1.9.0.js"></script>
+    
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.0.js"></script>
+    
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="font-family: 'Marvel';">
+            
+            <div class="navbar-header">
+                <img class="logo" id="iconoPaginaRosa" />
+                
+                <a class="navbar-brand" href="/@controller/Inicio">
+                    
+                    <i><span class="HeaderNombreEmpresa">SoftPech</span></i>
+                    
+                </a>
+                <button type="button" id="btnCollapse" class="navbar-toggle" data-toggle="collapse" data-target="#menuscroll">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse" id="menuscroll">
+                <a class="navbar-brand" href="/@controller/Inicio#sectionHome" id="menuInicio">Inicio</a>
+                <a class="navbar-brand" href="/@controller/Inicio#sectionQuienesSomos" id="menuQuienesSomos">¿Quiénes Somos?</a>
+                <a class="navbar-brand" href="/@controller/Inicio#sectionQueHacemos" id="menuQueHacemos">¿Qué hacemos?</a>
+                <a class="navbar-brand" href="/@controller/Inicio#sectionComoHacemos" id="menuComoHacemos">¿Cómo lo hacemos?</a>
+                <a class="navbar-brand" href="/@controller/Inicio#sectionTecnologias" id="menuTecnologias">Tecnologías</a>
+                <a class="navbar-brand" href="/@controller/Inicio#sectionContacto" id="menuContacto">Contactanos</a>
+
+            </div>
+            
+        </nav>
+    </header>
+
+    <div class="body">
+        
+
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    <!-- Scroll for simple page-->
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="~/Scripts/jquery.scrollTo.min.js"></script>
+    
+    <script>
+    $(document).on("ready", function () {
+        // Scroll
+        
+
+        $('#menuscroll').localScroll({
+            target: 'body'
+        });
+
+        $.fn.menu_is_on_screen = function () {
+
+            var win = $(window);
+
+            var viewport = {
+                top: win.scrollTop(),
+                left: win.scrollLeft()
+            };
+            viewport.right = viewport.left + win.width();
+            viewport.bottom = viewport.top + win.height();
+
+            var bounds = this.offset();
+            bounds.right = bounds.left + this.outerWidth();
+            bounds.bottom = bounds.top + this.outerHeight();
+
+            return ((viewport.top + 60 > bounds.top));
+        };
+
+        parallax();
+    });
+
+
+    $(window).scroll(function () { // bind window scroll event
+
+        var viewport = { top: $(window).scrollTop() };
+
+        if (viewport.top <= 10) {
+            DesactivarTodos();
+            
+        }
+
+        if ($("#sectionHome").menu_is_on_screen()) {
+            DesactivarTodos();
+            $("#menuInicio").addClass('menuActive');
+        }
+
+        if ($("#sectionQuienesSomos").menu_is_on_screen()) {
+            DesactivarTodos();
+            $("#menuQuienesSomos").addClass('menuActive');
+        }
+
+        if ($("#sectionQueHacemos").menu_is_on_screen()) {
+            DesactivarTodos();
+            $("#menuQueHacemos").addClass('menuActive');
+        }
+
+
+        if ($("#sectionComoHacemos").menu_is_on_screen()) {
+            DesactivarTodos();
+            $("#menuComoHacemos").addClass('menuActive');
+        }
+
+        if ($("#sectionTecnologias").menu_is_on_screen()) {
+            DesactivarTodos();
+            $("#menuTecnologias").addClass('menuActive');
+        }
+
+        if ($("#sectionContacto").menu_is_on_screen()) {
+            DesactivarTodos();
+            $("#menuContacto").addClass('menuActive');
+        }
+        
+    });
+
+    function DesactivarTodos() {
+
+        $("#menuscroll a").removeClass('menuActive')
+    }
+
+    function parallax() {
+
+        $window = $(window);
+
+        $('#sectionHome').each(function () {
+            // declare the variable to affect the defined data-type
+            var $scroll = $(this);
+            
+
+            $(window).scroll(function () {
+                // HTML5 proves useful for helping with creating JS functions!
+                // also, negative value because we're scrolling upwards
+                var xPos = -($window.scrollTop() / 4);
+
+                // background position
+                var coords = xPos + 'px 50%';
+
+                // move the background
+                $scroll.css({ backgroundPosition: coords });
+            }); // end window scroll
+        });  // end section function
+    }
+
+    </script>
+
+
+
+</body>
+</html>
